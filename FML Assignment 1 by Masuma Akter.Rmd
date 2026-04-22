@@ -1,0 +1,62 @@
+---
+title: "Assignment1-FML"
+author: "Masuma"
+date: "2024-02-04"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r}
+##Executive Summary
+#Here I have imported a file from web which consists of both  quantitative and qualitative variables on apple quality.I have tried to show the descriptive analysis and relevant plotting on that same Dataset.
+```
+
+***
+
+##Assigning value of may_dataset by importing csv file from external source
+
+##source-https://www.kaggle.com/datasets/nelgiriyewithana/apple-quality
+```{r}
+my_dataset <- read.csv("C:/Users/user/Desktop/FML Assignment/apple_quality.csv") 
+```
+
+##Descriptive statistics for  quantitative and categorical variables
+```{r}
+summary(my_dataset)
+```
+
+##Dimension of my dataset
+```{r}
+dim(my_dataset)
+```
+
+##Class and structure of my dataset
+```{r}
+class(my_dataset)
+str(my_dataset)
+```
+
+##Showing mean of a specific column-crunchiness
+```{r}
+mean(my_dataset$Crunchiness)
+```
+
+##variable transformation
+```{r}
+as.character(my_dataset$Weight)
+```
+
+##Plotting one quantitative variable
+```{r}
+plot(my_dataset$Sweetness, my_dataset$Acidity)
+```
+
+##Plotting the data by using Histogram
+```{r}
+hist(my_dataset$Sweetness)
+```
+
+##Conclusion
+The whole data set on Apple quality shows various features of apples and here I have done analysis on descriptive and graphical perspective statistics.
+
